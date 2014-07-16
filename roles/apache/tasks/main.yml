@@ -1,0 +1,7 @@
+---
+# file: roles/apache/tasks/main.yml
+
+- name: Install Apache 2
+  apt: name={{ item }} state=latest
+  with_items:
+    - apache2
